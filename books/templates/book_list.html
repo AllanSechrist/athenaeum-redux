@@ -16,7 +16,7 @@
     
     {% for book in book_list %}
         <tr scope="row">
-            <td>{{ book.title }}</a></td>
+            <td><a href="{{ book.get_absolute_url }}">{{ book.title }}</a></td>
             <td>{{ book.author }}</td>
             <td>{{ book.publisher }}</td>
             <td>{{ book.isbn }}</td>
