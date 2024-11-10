@@ -1,0 +1,30 @@
+{% extends "_base.html" %}
+
+{% block title %}Books{% endblock title %}
+
+
+{% block content %}
+    <table class="table">
+        <thead>
+            <tr scope="row">
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">Publisher</th>
+                <th scope="col">ISBN</th>
+            </tr>
+        </thead>
+    
+    {% for book in book_list %}
+        <tr scope="row">
+            <td>{{ book.title }}</a></td>
+            <td>{{ book.author }}</td>
+            <td>{{ book.publisher }}</td>
+            <td>{{ book.isbn }}</td>
+        </tr>
+    {% empty %}
+        <h2>
+            There are no books
+        </h2>
+    {% endfor %}
+    </table>
+{% endblock content %}
